@@ -1,0 +1,87 @@
+a {
+	text-decoration: none;
+}
+a:hover {
+	cursor: default;
+}
+#container {
+	width: 800px;
+	height: 600px;
+	background: url('wallpapers/lxde_blue.jpg');
+	background-size: 800px 600px;
+}
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto auto;
+}
+#content  div {
+	position: absolute;
+}
+
+/* desktop icon */
+#desktop {
+	width: 100%;
+	height: 570px;
+	border: 1px solid red;
+}
+.icon_item {
+	width: 64px;
+	height: 64px;
+}
+#home {
+	text-align: center;
+}
+#home:after {
+	content: "Home";
+	color: white;
+	/*background: blue;*/
+	cursor: default;
+}
+
+/* status bar */
+#status_bar {
+	width: 100%;
+	height: 30px;
+	top: 570px;
+	background: linear-gradient(
+		to bottom, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+	background: -ms-linear-gradient(
+		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+	background: -moz-linear-gradient(
+		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+	background: -o-linear-gradient(
+		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+	background: -webkit-linear-gradient(
+		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+}
+#status_bar > div {
+	position: relative;
+	display: inline;
+	height: 100%;
+}
+
+/* workspace */
+.work {
+	width: 50px;
+	height: 20px;
+	background: #4E76A8;
+}
+.workspace {
+	width: 24px;
+	height: 20px;
+	margin: 4px 2px;
+	background: #4E76A8;
+	position: absolute;
+	display: inline-block;
+	float: left;
+}
+#workspace2 {
+	left: 26px;
+	background: #A9A5A2;
+}
+/* tray */
+#tray {
+	float: right;
+}
