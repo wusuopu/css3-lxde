@@ -2,7 +2,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	cursor: default;
+	cursor: auto;
 }
 #container {
 	width: 800px;
@@ -66,7 +66,9 @@ a:hover {
 .work {
 	width: 50px;
 	height: 20px;
-	background: #4E76A8;
+	/*background: #4E76A8;*/
+	display: inline-block !important;
+	position: relative !important;
 }
 .workspace {
 	width: 24px;
@@ -81,7 +83,26 @@ a:hover {
 	left: 26px;
 	background: #A9A5A2;
 }
+/* task bar */
+#task_bar {
+	/*width: 100%;*/
+	border: 1px solid red;
+	display: inline-block !important;
+	position: relative !important;
+}
 /* tray */
 #tray {
 	float: right;
+}
+#clock {
+	height: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	display: inline-block;
+	margin: auto;
+	position: relative !important;
+	vertical-align: middle;
+	margin: auto;
+	cursor: default;
 }
