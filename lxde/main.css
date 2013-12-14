@@ -9,6 +9,7 @@ a:hover {
 	height: 600px;
 	background: url('wallpapers/lxde_blue.jpg');
 	background-size: 800px 600px;
+	margin: auto auto;
 }
 #content {
 	width: 100%;
@@ -24,7 +25,7 @@ a:hover {
 #desktop {
 	width: 100%;
 	height: 570px;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 .icon_item {
 	width: 64px;
@@ -38,6 +39,50 @@ a:hover {
 	color: white;
 	/*background: blue;*/
 	cursor: default;
+}
+/* 桌面提示 */
+#workspace_tooltips {
+	width: 85px;
+	height: 50px;
+	background: #242424;
+	margin: 35% auto;
+	position: relative !important;
+	visibility: hidden;
+	background: linear-gradient(
+		to bottom, #2D2D2D 0%, #2D2D2D 50%, #0B0B0B 50%, #0B0B0B 100%);
+	background: -ms-linear-gradient(
+		top, #2D2D2D 0%, #2D2D2D 50%, #0B0B0B 50%, #0B0B0B 100%);
+	background: -moz-linear-gradient(
+		top, #2D2D2D 0%, #2D2D2D 50%, #0B0B0B 50%, #0B0B0B 100%);
+	background: -o-linear-gradient(
+		top, #2D2D2D 0%, #2D2D2D 50%, #0B0B0B 50%, #0B0B0B 100%);
+	background: -webkit-linear-gradient(
+		top, #2D2D2D 0%, #2D2D2D 50%, #0B0B0B 50%, #0B0B0B 100%);
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px black;
+	z-index: 19;
+}
+#workspace_tooltips div {
+	height: 20px;
+	top: 16px;
+	display: inline-block;
+	border-radius: 2px;
+}
+#wk_tooltips1 {
+	width: 20px;
+	left: 2px;
+	background: #4A4A4A;
+}
+#wk_tooltips2 {
+	width: 20px;
+	left: 24px;
+	background: white;
+}
+#wk_tooltips_text {
+	color: white;
+	font-size: 14px;
+	left: 46px;
+	vertical-align: middle;
 }
 
 /* status bar */
@@ -55,6 +100,7 @@ a:hover {
 		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
 	background: -webkit-linear-gradient(
 		top, #8B8B8B 0%, #383838 30%, #090909 50%, #383838 70%, #8B8B8B 100%);
+	z-index: 20;
 }
 #status_bar > div {
 	position: relative;
@@ -85,7 +131,6 @@ a:hover {
 }
 /* task bar */
 #task_bar {
-	/*width: 100%;*/
 	border: 1px solid red;
 	display: inline-block !important;
 	position: relative !important;
