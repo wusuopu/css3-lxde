@@ -3,7 +3,24 @@
 <head>
 <meta charset="utf8">
 <title>LXDE</title>
-<link rel="stylesheet" type="text/css" href="lxde/main.css">
+<!-- <link rel="stylesheet" type="text/css" href="lxde/main.css"> -->
+<link rel="stylesheet/less" type="text/css" href="lxde/main.less">
+<link rel="stylesheet/less" type="text/css" href="lxde/menu.less">
+<script type="text/javascript">
+    less = {
+        env: "development", // 或者"production"
+        async: false,       // 异步加载导入的文件
+        fileAsync: false,   // 使用文件协议访问页面时异步加载导入的文件
+        poll: 2000,         // 在监视模式下，每两次请求之间的时间间隔（ms）
+        functions: {},      // user functions, keyed by name
+        dumpLineNumbers: "comments", // 或者"mediaQuery"，或者"all"
+        relativeUrls: false,// 是否调整相对路径
+                            // 如果为false，则url已经是相对入口less文件的
+                            // entry less file
+        //rootpath: ":/a.com/"// 添加到每个url开始处的路径
+    };
+</script>
+<script type="text/javascript" src="lxde/less-1.5.0.min.js"></script>
 </head>
 <body>
 <div id="container">
@@ -20,12 +37,12 @@
 		</div>
 		<div id="status_bar">
 			<div id="menu_bar">
-				<a href="#">
-					<img src="lxde/images/lxde-icon.png" alt="menu">
-				</a>
-				<a href="#">
-					<img src="lxde/app_24/firefox.png" title="Firefox">
-				</a>
+				<!-- <a href="#"> -->
+					<img id="start_menu" src="lxde/images/lxde-icon.png" alt="menu">
+				<!-- </a> -->
+				<!-- <a href="#"> -->
+					<img class="start_app" src="lxde/app_24/firefox.png" title="Firefox">
+				<!-- </a> -->
 			</div>
 			<div class="work">
 				<div id="workspace1" class="workspace" title="桌面1"></div>
@@ -35,17 +52,23 @@
 			</div>
  			<div id="tray">
 				<a href="#">
-					<img src="lxde/status_24/audio-volume-high.png" title="音量控制 100">
+					<img id="volume_control_tray" src="lxde/status_24/audio-volume-high.png" title="音量控制 100">
 				</a>
 				<div id="clock"></div>
 				<a href="#">
-					<img src="lxde/actions_24/application-exit.png" title="Logout">
+					<img id="exit_tray" src="lxde/actions_24/application-exit.png" title="Logout">
 				</a>
 			</div>
 		</div>
 	</div>
+	<div id="menu_canvas">
+	    <div class="menu_area" id="menu_area">
+
+	    </div>
+	</div>
 </div>
 <script type="text/javascript" src="lxde/jquery-2.0.2.min.js"></script>
 <script type="text/javascript" src="lxde/script.js"></script>
+<script type="text/javascript" src="lxde/menu.js"></script>
 </body>
 </html>

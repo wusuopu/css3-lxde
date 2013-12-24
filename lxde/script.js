@@ -64,11 +64,21 @@ function setClock(){
   }, 60000);
 };
 setClock();
+
 // 切换工作区
 var workspace = new WorkSpace("workspace1", "workspace2",
                                   "wk_tooltips1", "wk_tooltips2", "wk_tooltips_text");
-$('.workspace').click(function(ev){
-  workspace.change(ev.target.id);
+$('#status_bar').click(function(ev) {
+  console.log(ev.target);
+  if (ev.target.id == "start_menu") {
+    $('#menu_canvas').show();
+  } else if (ev.target.className == "workspace") {
+    workspace.change(ev.target.id);
+  } else if (ev.target.id == "volume_control_tray") {
+    console.log("Volume Control");
+  } else if (ev.target.id == "exit_tray") {
+    console.log("Exit");
+  }
 });
 
 });

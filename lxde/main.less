@@ -1,0 +1,168 @@
+	@content_width: 800px;
+@content_height: 600px;
+@status_bar_height: 30px;
+
+.rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.background_top_to_bottom (@color1, @pos1, @color2, @pos2, @color3, @pos3, @color4, @pos4, @color5: #FFF, @pos5: 100%) {
+	background: linear-gradient(
+		to bottom, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4, @color5 @pos5);
+	background: -ms-linear-gradient(
+		top, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4, @color5 @pos5);
+	background: -moz-linear-gradient(
+		top, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4, @color5 @pos5);
+	background: -o-linear-gradient(
+		top, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4, @color5 @pos5);
+	background: -webkit-linear-gradient(
+		top, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4, @color5 @pos5);
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	cursor: auto;
+}
+#container {
+	width: @content_width;
+	height: @content_height;
+	background: url('wallpapers/lxde_blue.jpg');
+	background-size: @content_width @content_height;
+	margin: auto auto;
+	position: relative;
+}
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto auto;
+}
+#content  div {
+	position: absolute;
+}
+
+/* desktop icon */
+#desktop {
+	width: 100%;
+	height: (@content_height - @status_bar_height);
+	/*border: 1px solid red;*/
+}
+.icon_item {
+	width: 64px;
+	height: 64px;
+}
+#home {
+	text-align: center;
+}
+#home:after {
+	content: "Home";
+	color: white;
+	/*background: blue;*/
+	cursor: default;
+}
+
+/* 桌面提示 */
+#workspace_tooltips {
+	width: 85px;
+	height: 50px;
+	background: #242424;
+	margin: (@content_height - 50px) / 2 auto;
+	position: relative !important;
+	visibility: hidden;
+	.background_top_to_bottom(#2D2D2D, 0%, #2D2D2D, 50%, #0B0B0B, 50%, #0B0B0B, 100%);
+	/*box-shadow: 1px 1px 1px black;*/
+	border: 1px solid black;
+	z-index: 19;
+	div {
+		height: 20px;
+		top: 16px;
+		display: inline-block;
+		border-radius: 2px;
+	}
+}
+#wk_tooltips1 {
+	width: 20px;
+	left: 2px;
+	background: #4A4A4A;
+}
+#wk_tooltips2 {
+	width: 20px;
+	left: 24px;
+	background: white;
+}
+#wk_tooltips_text {
+	color: white;
+	font-size: 14px;
+	left: 46px;
+	vertical-align: middle;
+}
+
+/* status bar */
+#status_bar {
+	width: 100%;
+	height: @status_bar_height;
+	top: (@content_height - @status_bar_height);
+	.background_top_to_bottom(#8B8B8B, 0%, #383838, 30%, #090909, 50%, #383838, 70%, #8B8B8B, 100%);
+	z-index: 20;
+}
+#status_bar > div {
+	position: relative;
+	display: inline;
+	height: 100%;
+}
+img#start_menu {
+	margin: 2px 0;
+}
+img.start_app {
+	margin: 3px 0;
+}
+
+/* workspace */
+.work {
+	width: 50px;
+	height: 20px;
+	/*background: #4E76A8;*/
+	display: inline-block !important;
+	position: relative !important;
+}
+.workspace {
+	width: 24px;
+	height: 20px;
+	margin: 4px 2px;
+	background: #4E76A8;
+	position: absolute;
+	display: inline-block;
+	float: left;
+}
+#workspace2 {
+	left: 26px;
+	background: #A9A5A2;
+}
+/* task bar */
+#task_bar {
+	border: 1px solid red;
+	display: inline-block !important;
+	position: relative !important;
+}
+/* tray */
+#tray {
+	float: right;
+}
+#clock {
+	height: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	display: inline-block;
+	margin: auto;
+	position: relative !important;
+	vertical-align: middle;
+	margin: auto;
+	cursor: default;
+}
