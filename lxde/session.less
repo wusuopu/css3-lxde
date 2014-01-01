@@ -54,17 +54,36 @@
 	.session_item {
 		width: 312px;
 		height: 34px;
-		/*line-height: 34px;*/
-		/*.less_border_radius(6px);*/
-		/*border: 1px solid #9F9C9A;*/
+		line-height: 34px;
+		vertical-align: middle;
+		.less_border_radius(5px);
+		border: 1px solid #9F9C9A;
 		margin: 5px 0;
 		/*padding: 0 0 0 5px;*/
 		text-align: left;
-		/*.less_linear_gradient(#FDFCFC, 0%, #FDFCFC, 50%, #EEEDEC, 50%, #EEEDEC, 100%);*/
+		outline: 0;
+		.less_linear_gradient(#FDFCFC, 0%, #FDFCFC, 50%, #EEEDEC, 50%, #EEEDEC, 100%);
 
-		/*&:hover {*/
-			/*.less_linear_gradient(#F1F5FA, 0%, #F1F5FA, 50%, #DADFE5, 50%, #DADFE5, 100%);*/
-			/*border-color: #6D89AD;*/
-		/*}*/
+		&:hover {
+			.less_linear_gradient(#FFFFFF, 0%, #FFFFFF, 50%, #F9F9F9, 50%, #EFEEED, 100%);
+		}
+
+		&:focus {
+			.less_linear_gradient(#F1F5FA, 0%, #F1F5FA, 50%, #DADFE5, 50%, #DADFE5, 100%);
+			border-color: #6D89AD;
+		}
+
+		&:active {
+			.less_linear_gradient(#D1D1D1, 0%, #C7C7C7, 50%, #C0C0C0, 50%, #B8B8BB, 100%);
+		}
+		&::-moz-focus-inner {
+    		border: none;
+		}
+		img {
+			margin: 3px 3px 3px 0;
+		}
+		span {
+			position: absolute;
+		}
 	}
 }
