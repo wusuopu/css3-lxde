@@ -131,7 +131,7 @@ a:hover {
 }
 /* task bar */
 #task_bar {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	display: inline-block !important;
 	position: relative !important;
 }

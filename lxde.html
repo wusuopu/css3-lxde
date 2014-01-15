@@ -6,6 +6,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="lxde/main.css"> -->
 <link rel="stylesheet/less" type="text/css" href="lxde/main.less">
 <link rel="stylesheet/less" type="text/css" href="lxde/menu.less">
+<link rel="stylesheet/less" type="text/css" href="lxde/session.less">
 <script type="text/javascript">
     less = {
         env: "development", // 或者"production"
@@ -61,14 +62,52 @@
 			</div>
 		</div>
 	</div>
-	<div id="menu_canvas">
+	<div id="menu_canvas" style="display:none; ">
 	    <div class="menu_area" id="menu_area">
 
 	    </div>
+	</div>
+	<div id="lxde_session" style="display:none; ">
+		<div id="session_menu">
+				<div id="session_content">
+					<img src="lxde/images/logout-banner.png" width="312px" alt="">
+					<hr>
+					<b>注销 LXDE 会话？</b>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/system-shutdown.png" alt="">
+						<span>关机(<u>U</u>)</span>
+					</button>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/gnome-session-reboot.png" alt="">
+						<span>重新启动(<u>R</u>)</span>
+					</button>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/gnome-session-suspend.png" alt="">
+						<span>挂起(<u>S</u>)</span>
+					</button>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/gnome-session-hibernate.png" alt="">
+						<span>休眠(<u>H</u>)</span>
+					</button>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/system-lock-screen.png" alt="">
+						<span>锁屏(<u>o</u>)</span>
+					</button>
+					<button type="button" class="session_item">
+						<img src="lxde/actions_24/system-log-out.png" alt="">
+						<span>注销(<u>L</u>)</span>
+					</button>
+					<button type="button" class="session_item" id="session_button_cancel">
+						<img src="lxde/actions_24/process-stop.png" alt="">
+						<span>取消(<u>C</u>)</span>
+					</button>
+				</div>
+		</div>
 	</div>
 </div>
 <script type="text/javascript" src="lxde/jquery-2.0.2.min.js"></script>
 <script type="text/javascript" src="lxde/script.js"></script>
 <script type="text/javascript" src="lxde/menu.js"></script>
+<script type="text/javascript" src="lxde/session.js"></script>
 </body>
 </html>

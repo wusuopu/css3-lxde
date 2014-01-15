@@ -77,7 +77,7 @@ $('#status_bar').click(function(ev) {
   } else if (ev.target.id == "volume_control_tray") {
     console.log("Volume Control");
   } else if (ev.target.id == "exit_tray") {
-    console.log("Exit");
+    $("#lxde_session").show();
   }
 });
 
